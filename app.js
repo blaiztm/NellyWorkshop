@@ -64,11 +64,13 @@ const productUrl = (product) => `product.html?id=${encodeURIComponent(product.id
 
 function productCard(product) {
   return `<article class="product-card">
-    <a class="product-photo" href="${productUrl(product)}" aria-label="${escapeHtml(product.type)} «${escapeHtml(product.name)}» — подробнее">
+    <a class="product-card-link" href="${productUrl(product)}">
+      <div class="product-photo">
       <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.alt)}" loading="lazy" width="600" height="700">
       <span class="product-tag">${escapeHtml(product.tag)}</span>
+      </div>
+      <div class="product-info"><div><h3>${escapeHtml(product.name)}</h3><p>${escapeHtml(product.subtitle)}</p></div><span class="product-price">${formatPrice(product.price)}</span></div>
     </a>
-    <div class="product-info"><div><h3><a href="${productUrl(product)}">${escapeHtml(product.name)}</a></h3><p>${escapeHtml(product.subtitle)}</p></div><span class="product-price">${formatPrice(product.price)}</span></div>
   </article>`;
 }
 
@@ -109,7 +111,7 @@ function renderProduct() {
   if (!product) {
     document.title = 'Украшение не найдено — Мастерская Нелли';
     document.querySelector('[data-product-breadcrumb]').textContent = 'Украшение не найдено';
-    target.innerHTML = '<section class="empty-state"><p class="eyebrow">Кажется, мы разминулись</p><h1>Такого украшения<br><em>пока нет.</em></h1><p>Возможно, ссылка устарела. Посмотрите другие истории в каталоге.</p><a class="button" href="catalog.html">Вернуться к украшениям ↗</a></section>';
+    target.innerHTML = '<section class="empty-state"><p class="eyebrow">Кажется, мы разминулись</p><h1>Такого украшения<br><em>пока нет.</em></h1><p>Возможно, ссылка устарела. Вернитесь в каталог через меню или хлебные крошки выше.</p></section>';
     return;
   }
 
@@ -128,19 +130,12 @@ function renderProduct() {
     <dl class="specifications">${specifications.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>
     <details><summary>Как беречь украшение</summary><p>Избегайте контакта с водой, парфюмом и бытовой химией. Храните отдельно в мягком мешочке, протирайте сухой салфеткой. Точные рекомендации будут зависеть от материалов настоящего изделия.</p></details>
     <details><summary>Заказ и доставка</summary><p>Мастерская готовится к открытию. Перед запуском здесь появятся подтверждённые способы связи, условия заказа, оплаты, доставки и возврата.</p></details>
-    <a class="text-link" href="catalog.html?category=${encodeURIComponent(product.category)}">Другие украшения этого вида ↗</a></div>
+    </div>
   </article>`;
-  const related = products.filter((item) => item.id !== product.id)
-    .sort((a, b) => Number(b.collection === product.collection) - Number(a.collection === product.collection))
-    .slice(0, 3);
-  document.querySelector('[data-related]').innerHTML = related.map(productCard).join('');
-  document.querySelector('[data-related-section]').hidden = false;
 }
 
 document.querySelectorAll('[data-year]').forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
-const featured = document.querySelector('[data-featured]');
-if (featured) featured.innerHTML = products.slice(0, 3).map(productCard).join('');
 renderCatalog();
 renderProduct();
