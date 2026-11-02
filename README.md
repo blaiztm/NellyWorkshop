@@ -1,6 +1,6 @@
 # Мастерская Нелли
 
-Russian-language showcase for a grandmother’s handmade jewelry. The design follows the photographed pieces: warm linen, deep olive, antique-brass accents, editorial serif headings, and full, uncropped product photography. Static HTML/CSS/JavaScript; no installation, build step, or backend.
+Russian-language showcase for a grandmother’s handmade jewelry. The design follows the photographed pieces: warm linen, soft pastel amber accents (#e8c58e), warm brown text, editorial serif headings, and full, uncropped product photography. Static HTML/CSS/JavaScript; no installation, build step, or backend.
 
 ## Preview
 

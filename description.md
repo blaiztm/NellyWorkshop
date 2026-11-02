@@ -4,7 +4,7 @@
 
 A customer-oriented, Russian-language website for a grandmother’s handmade jewelry workshop. The first release is a showcase prototype, not an operational shop. The catalog uses the owner’s jewelry photographs. Product names are editorial suggestions; prices, materials, measurements, weights, availability, and ordering details still need owner confirmation.
 
-The design must remain warm, elegant, and consistent: warm linen backgrounds, deep olive and antique-brass accents, editorial headings, clear body text, and prominent jewelry photography. The refined direction uses a necklace-inspired Cyrillic Н maker’s mark, rectangular photography, open layouts with fine rules instead of repeated colored cards, real workshop photography, and direct, specific Russian copy. Avoid floating badges, decorative star symbols, and repeated generic slogans. Customer-facing content is Russian; prices use Russian rubles. Do not introduce a separate visual style for mobile or individual collections.
+The design must remain warm, elegant, and consistent: warm linen backgrounds, soft pastel amber accents (#e8c58e), and warm brown text, editorial headings, clear body text, and prominent jewelry photography. The refined direction uses a necklace-inspired Cyrillic Н maker’s mark, rectangular photography, open layouts with fine rules instead of repeated colored cards, real workshop photography, and direct, specific Russian copy. Avoid floating badges, decorative star symbols, and repeated generic slogans. Customer-facing content is Russian; prices use Russian rubles. Do not introduce a separate visual style for mobile or individual collections.
 
 ## Customer journey: one authoritative browsing path
 
