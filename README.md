@@ -1,39 +1,54 @@
 # Мастерская Нелли
 
-Russian-language, showcase-first prototype for a handmade jewelry workshop. The visual direction uses ivory, blush, and sage. No framework, package installation, build step, or backend is required.
+Russian-language showcase for a grandmother’s handmade jewelry. The design follows the photographed pieces: warm linen, deep olive, antique-brass accents, editorial serif headings, and full, uncropped product photography. Static HTML/CSS/JavaScript; no installation, build step, or backend.
 
 ## Preview
 
-Open [index.html](index.html) in a browser. Navigation, catalog filters, sorting, and product pages also work when opened directly from disk. Alternatively, use your editor’s static-site preview server.
+Open `index.html` directly in a browser, or serve this directory with `python3 -m http.server 8080 --bind 127.0.0.1`. Navigation, filters, sorting, and product pages work from disk as well as on static hosting. Photographs are local. Only Google Fonts requires an internet connection; system font fallbacks are provided.
 
-An internet connection is needed for Google Fonts and Unsplash photographs. System fonts remain available if the font service cannot load. Photography is illustrative and is not a representation of actual workshop inventory.
+## Catalog and photographs
+
+`app.js` contains 15 listings: 7 pairs of earrings, 4 necklaces, 1 bracelet, and 3 sets. All 16 supplied photographs are represented. `Pictures/Individual/31613.jpg` and `31617.jpg` appear to show the same necklace, so they form a two-view gallery for «Медовая тропа». Confirm that grouping with the maker when completing the product specifications.
+
+Original photos remain unchanged in `Pictures/`. The site uses JPEG derivatives in `assets/products/`, at maximum dimensions of 720px for cards and 1440px for detail pages. Each filename retains its original photo number. Images use `object-fit: contain` to keep the supplied composition visible, including landscape photographs and all set components.
+
+| Photo number | Listing | Type |
+| --- | --- | --- |
+| 31603 | Лесные истории | Earrings |
+| 31607 | Синий каскад | Earrings |
+| 31608 | Голубой лёд | Earrings |
+| 31610 | Античный медальон | Necklace |
+| 31611 | Лесная геометрия | Earrings |
+| 31612 | Графитовый каскад | Earrings |
+| 31613, 31617 | Медовая тропа | Necklace; two views |
+| 31614 | Молочный узел | Necklace |
+| 31615 | Белый дождь | Earrings |
+| 31620 | Чёрное и молочное | Earrings |
+| 31621 | Медовый браслет | Bracelet |
+| 31622 | Белые лепестки | Necklace |
+| 31616 | Лесная геометрия | Set: necklace and earrings |
+| 31618 | Медовая тропа | Set: necklace and bracelet |
+| 31619 | Молочный узел | Set: necklace and earrings |
+
+Names are editorial suggestions. Descriptions identify visible forms and colors; they do not certify stone identity, metal composition, dimensions, weight, or availability. Prices are `null` and display «Цена уточняется». Price sorting remains disabled until prices are supplied; workshop order and Russian alphabetical sorting work now. Unknown prices always sort after known prices in either price direction.
 
 ## Structure
 
-- [index.html](index.html): introduction, occasion-based inspiration, maker story, and choosing guidance; no product listings.
-- [catalog.html](catalog.html): category filters and price sorting.
-- [product.html](product.html): shared detail-page template; each sample piece or set has its own link, selected by its identifier.
-- [app.js](app.js): six sample products, prices, descriptions, specifications, and rendering behavior. Edit the catalog here to replace sample content.
-- [styles.css](styles.css): shared responsive design, typography, colors, and reduced-motion support.
-- [description.md](description.md): complete site structure, mandatory mobile/accessibility requirements, customer journey, and working rules.
+- `index.html`: introduction, inspiration, workshop story, and choosing guidance. No product listings.
+- `catalog.html`: the only product grid, category filters, sorting, and announced result count.
+- `product.html`: shared detail template with descriptions, set contents, specifications, photo views, and care/order disclosures.
+- `app.js`: catalog data and rendering.
+- `styles.css`: shared visual design, responsive layouts, and accessibility styles.
+- `description.md`: site structure and working requirements.
 
-The single browsing path is homepage → catalog → product or set. The header’s «Каталог» entry is the forward route into the only product grid; breadcrumbs provide back-navigation. There are no homepage listings or related-product grids.
-
-All pages share responsive layouts, with readable mobile copy, 44px-high primary controls, fluid headings, and single-column catalog cards on narrow phones. See the required viewport and device checks in [description.md](description.md).
+The browsing path remains homepage → catalog → item or set. The header’s «Каталог» is the single forward catalog entry; breadcrumbs provide back-navigation.
 
 ## Verification
 
-Chromium checks covered all three page types at 320, 375, 390, 768, 1024, and 1440px: no horizontal overflow, primary controls at least 44px high, and all six sample items retained on mobile. Browsing checks covered filters, both price-sort directions, all product/set pages, care disclosures, invalid links, direct-file preview, and absence of JavaScript exceptions.
+The photography update was checked in the Codex browser at 320, 375, 390, 768, 1024, and 1440px for the homepage, catalog, and product template. No horizontal overflow was found; navigation, filters, sorting, and disclosure controls meet the 44px minimum. All 15 product/set pages, category counts, alphabetical sorting, gallery switching, disclosures, invalid identifiers, and category deep links were checked. JavaScript syntax and local image/link references were checked separately.
 
-External assets were blocked during these checks to verify fallback layouts independently of third-party availability. Loaded-photo visual review, 200% browser zoom, and real iOS Safari / Android Chrome checks remain required before launch. No testing dependency is required by the site; browser tooling was installed separately in a temporary directory.
+Real-device iOS Safari / Android Chrome and actual 200% browser zoom remain untested and required before launch. Responsive browser checks do not replace these.
 
-## Before public launch
+## Before accepting orders
 
-- Confirm the workshop name and replace the sample maker biography with the real story and portrait.
-- Replace every stock photograph and sample specification with verified product photos, materials, dimensions, prices, availability, and any relevant allergy information. Sets need accurate photos of all included pieces.
-- Decide how customers contact the workshop and place orders. There is deliberately no checkout, payment collection, contact form, or simulated order confirmation in this prototype.
-- Confirm delivery, payment, return, seller-information, and applicable privacy requirements before enabling sales.
-- Choose a domain and static hosting with HTTPS. Add actual social-sharing imagery and production metadata. Search indexing of individual products should be reviewed before launch: this prototype renders their content in the browser; prerendered product pages or a commerce platform may be preferable for the production catalog.
-- Test with actual content on mobile devices. Optimize and preferably host the approved photographs and fonts locally instead of relying on external services.
-
-No analytics, cookies, customer accounts, or collection of customer data have been added. This is a visual and browsing foundation, not a production commerce system.
+Confirm the product names and photo grouping, then supply prices, exact materials, measurements, weights, and availability. Add the maker’s fuller story, portrait, contact details, and verified order/delivery terms. No checkout, payment collection, contact form, analytics, or simulated order confirmation is implemented. Choose HTTPS hosting and review product indexing before launch; details currently render in the browser.

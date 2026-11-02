@@ -2,9 +2,9 @@
 
 ## Purpose and scope
 
-A customer-oriented, Russian-language website for a grandmother’s handmade jewelry workshop. The first release is a showcase prototype, not an operational shop. The workshop name, maker story, photographs, specifications, prices, and collection names are placeholders until confirmed by the owner.
+A customer-oriented, Russian-language website for a grandmother’s handmade jewelry workshop. The first release is a showcase prototype, not an operational shop. The catalog uses the owner’s jewelry photographs. Product names are editorial suggestions; prices, materials, measurements, weights, availability, and ordering details still need owner confirmation.
 
-The design must remain warm, elegant, and consistent: ivory backgrounds, pastel blush and sage accents, editorial headings, clear body text, and prominent jewelry photography. Customer-facing content is Russian; prices use Russian rubles. Do not introduce a separate visual style for mobile or individual collections.
+The design must remain warm, elegant, and consistent: warm linen backgrounds, deep olive and antique-brass accents, editorial headings, clear body text, and prominent jewelry photography. The refined direction uses a necklace-inspired Cyrillic Н maker’s mark, rectangular photography, open layouts with fine rules instead of repeated colored cards, real workshop photography, and direct, specific Russian copy. Avoid floating badges, decorative star symbols, and repeated generic slogans. Customer-facing content is Russian; prices use Russian rubles. Do not introduce a separate visual style for mobile or individual collections.
 
 ## Customer journey: one authoritative browsing path
 
@@ -22,38 +22,38 @@ The design must remain warm, elegant, and consistent: ivory backgrounds, pastel 
 ### Homepage — [index.html](index.html)
 
 1. Shared announcement and header navigation.
-2. Hero: clear value proposition, illustrative jewelry photograph, and guidance to the catalog in the menu.
+2. Hero: clear value proposition, photograph of a real jewelry set, and guidance to the catalog in the menu.
 3. Brief workshop values.
 4. Editorial inspiration: choosing for yourself, a meaningful gift, or a special occasion. No product listings.
-5. Maker introduction with an explicitly marked placeholder for the future portrait and biography.
+5. Maker introduction with real jewelry photography and the family’s account of photographing the pieces together. Do not invent a fuller biography or a portrait.
 6. Three-step explanation of how to browse and assess an item.
 7. Brand closing message and opening-status information.
-8. Shared footer with a visible demonstration disclaimer.
+8. Shared footer explaining that prices/specifications are being completed and online orders are not yet accepted.
 
 ### Catalog — [catalog.html](catalog.html)
 
-- Breadcrumbs, introduction, and visible sample-content notice before product cards.
+- Breadcrumbs, introduction, and a concise note that prices and specifications are being completed.
 - Filters: all items, earrings, necklaces, bracelets, and sets.
-- Sorting: workshop order, ascending price, descending price.
+- Sorting: workshop order and Russian alphabetical order. Price sorting remains disabled until some prices are confirmed. Unknown prices always come last in both price directions.
 - Product count announced when the selection changes.
-- The only product grid on the site. Cards show photograph, name, short description, and illustrative price.
+- The only product grid on the site. Cards show photograph, name, short description, and confirmed price or «Цена уточняется».
 - Category query links are supported as a technical deep link, not promoted as an additional browsing path.
 - A useful explanation is displayed when JavaScript is disabled.
 
 ### Product or set — [product.html](product.html)
 
 - One shared template; each item is selected by its identifier in the URL.
-- Breadcrumbs, photograph, name, category, collection, description, and price.
-- Materials, dimensions, and exact contents; sets use the same template with an explicit list of included pieces.
+- Breadcrumbs, photograph, name, category, palette, description, and confirmed price or «Цена уточняется».
+- Materials and dimensions remain explicitly unconfirmed until supplied. Sets use the same template with a list of the pieces visible in their photographs.
 - Expandable care and order/delivery information.
-- A visible warning that stock photography and product information are examples, not available inventory.
+- Real local photographs with no stock-photo disclaimer. Multiple photographs of the same piece use accessible thumbnail buttons on its detail page. Preserve every supplied photo’s full framing.
 - Missing or invalid identifiers display a readable not-found state with guidance to existing catalog navigation. Do not show unrelated products instead.
 - No purchase button, fake checkout, simulated availability, or related-item grid.
 
 ### Shared implementation
 
 - [styles.css](styles.css): shared styling and responsive layouts for all pages.
-- [app.js](app.js): one sample catalog data source, safe rendering, category filtering, price sorting, product lookup, dynamic page metadata, and footer year. No framework or bundler.
+- [app.js](app.js): one catalog data source, safe rendering, category filtering, price sorting, product lookup, dynamic page metadata, and footer year. No framework or bundler.
 - [README.md](README.md): quick-start preview instructions and launch checklist.
 - [description.md](description.md): authoritative structure and working requirements. Review before changes and update whenever the agreed structure or requirements change.
 
@@ -66,7 +66,7 @@ The design must remain warm, elegant, and consistent: ivory backgrounds, pastel 
 - Use fluid headings, wrapping navigation, stacked hero/detail layouts, and single-column product cards on narrow phones.
 - Main reading copy should be at least 16px; secondary labels and supporting copy must remain comfortably readable. Avoid tiny decorative text for important information.
 - Navigation, category filters, sorting, and disclosure controls need touch areas at least 44px high. Do not rely on hover interactions.
-- Mobile must retain all six sample items, all filters, both price-sort directions, full specifications, and care/order disclosures.
+- Mobile must retain all 15 listings, all filters, sorting, photo views, specifications, and care/order disclosures.
 
 ## Accessibility and usability requirements
 
@@ -76,7 +76,7 @@ The design must remain warm, elegant, and consistent: ivory backgrounds, pastel 
 - Target WCAG AA contrast: at least 4.5:1 for normal text and 3:1 for large text. Pastel backgrounds do not justify low-contrast control labels.
 - Honor reduced-motion preferences. Content and controls must remain usable at 200% zoom.
 - Maintain explicit image dimensions to reduce layout shifts; lazy-load below-the-fold catalog images. Do not lazy-load the main product photograph.
-- System font fallbacks are mandatory. The prototype uses externally hosted Google Fonts and Unsplash photography; image availability and privacy/performance implications must be reviewed before launch.
+- System font fallbacks are mandatory. The site uses local optimized JPEGs and externally hosted Google Fonts with system fallbacks. Originals in Pictures/ must remain unchanged.
 
 ## Marketing and content requirements
 
@@ -84,7 +84,7 @@ The design must remain warm, elegant, and consistent: ivory backgrounds, pastel 
 - Use warm, specific Russian copy without pressure or jargon. Preserve an intimate workshop identity rather than a mass-market storefront tone.
 - Do not invent reviews, sales counts, customer testimonials, discounts, urgency, scarcity, free delivery, hypoallergenic properties, or guarantees.
 - Claims about handmade production, materials, collections, availability, and fulfillment must be confirmed against actual products before public launch.
-- Clearly distinguish sample content from verified inventory. Do not turn demonstration prices or specifications into sales promises.
+- Describe visible colors and shapes without inferring certified materials from photos. Do not invent prices or specifications; use null prices and explicit unconfirmed labels.
 
 ## Technical and working requirements
 
@@ -99,9 +99,13 @@ The design must remain warm, elegant, and consistent: ivory backgrounds, pastel 
 ## Decisions required before selling
 
 1. Confirm the workshop name, real story, portrait, and contact details.
-2. Supply approved photos of every piece and every component of a set, accurate specifications, prices, and availability.
+2. Confirm the editorial product names and photo grouping; supply accurate specifications, prices, and availability. All 16 supplied images are represented in 15 listings: 31613 and 31617 are treated as two views of one necklace.
 3. Choose a single ordering flow and its commerce service or backend. Browser-only code must not be trusted to process payments or manage orders.
 4. Confirm seller details and conditions for payment, delivery, returns, care, and relevant allergy disclosures; add the applicable legal/privacy information.
 5. Select the domain and HTTPS hosting, optimize and preferably self-host assets, and prepare sharing images and verified metadata.
 6. Review product discoverability: browser-rendered product details are sufficient for this prototype; consider prerendered pages or an appropriate commerce platform before launch.
-7. Complete real-device, accessibility, content, and end-to-end order testing before removing demonstration notices or accepting money.
+7. Complete real-device, accessibility, content, and end-to-end order testing before accepting orders or money.
+
+## Photography-led catalog update
+
+The current catalog contains 12 individual listings (7 earrings, 4 necklaces, 1 bracelet) and 3 sets. Source-to-product mapping is documented in README.md. Use assets/products/720px JPEG derivatives for cards and 1440px derivatives for detail views; full-image containment prevents cropping the jewelry or set components. The original Pictures/ files are the source of truth.

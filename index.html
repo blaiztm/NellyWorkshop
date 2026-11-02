@@ -3,54 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Мастерская Нелли — украшения ручной работы, вдохновлённые природой и маленькими радостями. Познакомьтесь с мастером и коллекциями.">
-  <meta name="theme-color" content="#faf7f2">
-  <title>Мастерская Нелли — украшения с теплом</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <meta name="description" content="Мастерская Нелли — украшения ручной работы с винтажным настроением. Природные оттенки, выразительные формы, отдельные украшения и комплекты.">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>Мастерская Нелли — украшения с характером</title>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="app.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
-  <div class="announcement">Маленькие детали. Большая любовь к своему делу.</div>
+  <div class="announcement">Украшения ручной работы · Цвет, фактура, характер</div>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Мастерская Нелли — главная"><span class="brand-flower" aria-hidden="true">✳</span><span>Мастерская Нелли<small>украшения ручной работы</small></span></a>
+    <a class="brand" href="index.html" aria-label="Мастерская Нелли — главная"><svg class="brand-mark" viewBox="0 0 48 54" fill="none" aria-hidden="true"><path d="M13 39V12m22 0v27M13 25h22" stroke="currentColor" stroke-width="1.4"/><path d="M8 13C1 29 8 48 24 49c16 0 24-20 17-36" stroke="currentColor" stroke-width=".8"/><circle cx="24" cy="49" r="2.5" fill="currentColor"/></svg><span>Мастерская Нелли<small>украшения ручной работы</small></span></a>
     <nav aria-label="Основная навигация"><a class="catalog-entry" href="catalog.html">Каталог <span aria-hidden="true">↗</span></a><a href="#story">О мастерской</a><a href="#details">Как выбрать</a></nav>
   </header>
   <main id="main">
-    <section class="hero container">
+    <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="tiny-flower" aria-hidden="true">✳</span> Сделано руками. Задумано сердцем.</p>
-        <h1>Маленькая деталь.<br><em>Ваше настроение.</em></h1>
-        <p class="hero-description">Украшения ручной работы, которые хочется носить, а не беречь для особого случая. Для себя — без повода. В подарок — с особым смыслом.</p>
-        <p class="hero-direction">Ваше знакомство с украшениями начинается в разделе <strong>«Каталог»</strong> в меню.</p>
-        <a class="text-link" href="#inspiration">Найти своё настроение <span aria-hidden="true">↓</span></a>
-        <div class="hero-note"><span class="note-line"></span> Не под тренд. Под вас.</div>
+        <p class="eyebrow">Ручная работа. Личное настроение.</p>
+        <h1 id="hero-title">С теплом рук.<br><em>С характером.</em></h1>
+        <p class="hero-description">Медовые оттенки, лесная зелень, светлые переливы. Выразительные украшения с винтажным настроением — для тех, кто любит вещи со своим характером.</p>
+        <a class="text-link" href="#story">Познакомиться с мастерской <span aria-hidden="true">↘</span></a>
+        <p class="hero-direction">Украшения и комплекты — в разделе «Каталог» в меню.</p>
       </div>
-      <div class="hero-visual">
-        <div class="hero-image-wrap"><img class="hero-image" src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1200&q=85" alt="Золотистые украшения с жемчугом на светлом фоне" fetchpriority="high" width="960" height="1120"><span class="image-label">новая история · тихое сияние</span></div>
-        <div class="round-note">с любовью<br><span>в каждой</span><br>детали <span aria-hidden="true">✧</span></div>
-        <div class="floating-note"><span aria-hidden="true">✧</span><div>Красота быть собой<small>Каждая деталь имеет значение</small></div></div>
-      </div>
+      <figure class="hero-visual">
+        <div class="hero-image-wrap"><img class="hero-image" src="assets/products/31618-1440.jpg" srcset="assets/products/31618-720.jpg 720w, assets/products/31618-1440.jpg 1440w" sizes="(max-width: 650px) 100vw, 50vw" alt="Колье и браслет медовых оттенков с бронзовыми цепочками на светлой ткани" fetchpriority="high" width="1075" height="1440"></div>
+        <figcaption><span>Медовые оттенки и ажурные детали</span><span class="photo-index">Из мастерской</span></figcaption>
+        <span class="visual-side-note" aria-hidden="true">Мастерская Нелли / детали</span>
+      </figure>
     </section>
-    <div class="values-strip"><span>Ручная работа</span><i aria-hidden="true">✧</i><span>Внимание к деталям</span><i aria-hidden="true">✧</i><span>Небольшие коллекции</span><i aria-hidden="true">✧</i><span>Вдохновлено природой</span></div>
-    <section class="section container" id="inspiration" aria-labelledby="inspiration-title">
-      <div class="center-heading"><p class="eyebrow">Красота на вашей стороне</p><h2 id="inspiration-title">Не нужен повод.<br>Нужно <em>ваше настроение.</em></h2><p class="section-intro">Один любимый акцент может сказать больше, чем целый образ.</p></div>
+    <div class="values-strip container"><span>Сделано руками</span><span>Природные оттенки</span><span>Внимание к каждой детали</span></div>
+    <section class="section container inspiration" id="inspiration" aria-labelledby="inspiration-title">
+      <div class="section-heading"><div><p class="eyebrow">Носить по-своему</p><h2 id="inspiration-title">Для будней.<br><em>И памятных дней.</em></h2></div><p class="section-intro">Украшение не обязательно выбирают<br>к событию. Иногда — просто потому,<br>что оно нравится.</p></div>
       <div class="occasion-grid">
-        <article><span class="eyebrow">01 / Для себя</span><h3>Обычный день.<br>Особенное чувство.</h3><p>Добавьте мягкого сияния к любимой рубашке или свитеру. Приятные мелочи не должны ждать праздника.</p></article>
-        <article><span class="eyebrow">02 / Для близкого человека</span><h3>Вместо тысячи<br>тёплых слов.</h3><p>Вспомните её любимый цвет, привычный стиль, маленькие радости. Хороший подарок начинается с внимания.</p></article>
-        <article><span class="eyebrow">03 / Для особого момента</span><h3>Тот самый<br>последний штрих.</h3><p>Лаконичные серьги или гармоничный комплект — выбирайте настроение, в котором хочется запомнить этот день.</p></article>
+        <article><span class="occasion-number" aria-hidden="true">01</span><p class="eyebrow">Для себя</p><h3>К любимой рубашке</h3><p>Зелёные бусины к натуральному льну, молочные оттенки к мягкому трикотажу. Начните с цвета, который уже есть в вашем гардеробе.</p></article>
+        <article><span class="occasion-number" aria-hidden="true">02</span><p class="eyebrow">В подарок</p><h3>«Увидела и подумала о тебе»</h3><p>Любимый цвет, знакомая форма, деталь, которую заметите только вы. Начните с того, что знаете о близком человеке.</p></article>
+        <article><span class="occasion-number" aria-hidden="true">03</span><p class="eyebrow">На особый случай</p><h3>Один выразительный акцент</h3><p>Длинные серьги с мерцающей бахромой или колье с медальоном. Однотонная ткань оставит выразительной форме достаточно пространства.</p></article>
       </div>
     </section>
     <section class="story-section" id="story" aria-labelledby="story-title"><div class="container story-grid">
-      <div class="story-art"><span class="story-symbol" aria-hidden="true">✳</span><div class="story-art-inner"><span class="eyebrow">Мастерская Нелли</span><p>Руки создают.<br><em>Сердце подсказывает.</em></p><span class="story-signature">С теплом, Нелли</span></div><span class="story-caption">Здесь скоро появится фотография мастера</span></div>
-      <div class="story-copy"><p class="eyebrow">Давайте знакомиться</p><h2 id="story-title">Не безликая вещь.<br><em>Чья-то забота в деталях.</em></h2><p>Мастерская задумана как место для украшений, за которыми стоит человек. Здесь важны не только форма и оттенок, но и то чувство, с которым вы выбираете свою вещь.</p><p>Скоро здесь появятся настоящая история Нелли, фотографии за работой и первые изделия. А пока можно познакомиться с настроением будущей мастерской.</p><span class="handwritten">Маленькая мастерская. Много души.</span></div>
+      <figure class="story-art"><img src="assets/products/31603-1440.jpg" srcset="assets/products/31603-720.jpg 720w, assets/products/31603-1440.jpg 1440w" sizes="(max-width: 650px) 100vw, 45vw" loading="lazy" width="1080" height="1440" alt="Зелёные бусины и ажурные бронзовые детали серёг на светлой ткани"><figcaption>Разные формы, близкие оттенки — и внимание к каждой бусине.</figcaption></figure>
+      <div class="story-copy"><p class="eyebrow">О мастерской</p><h2 id="story-title">За каждой вещью —<br><em>человек.</em></h2><p>В основе этой мастерской — простая идея: дать бабушкиным украшениям ручной работы своё место. Где можно рассмотреть каждую бусину, выбрать подарок или найти что-то для себя.</p><p>Мы вместе с бабушкой сфотографировали её работы, чтобы показать их здесь. На снимках можно увидеть, как сочетаются цвета, как устроены подвески и как отдельные украшения складываются в комплекты.</p><p class="story-signature">Мастерская Нелли</p></div>
     </div></section>
-    <section class="section container" id="details" aria-labelledby="details-title">
-      <div class="center-heading"><p class="eyebrow">Выбирать — в удовольствие</p><h2 id="details-title">От первого взгляда<br><em>до «это моё».</em></h2></div>
-      <div class="care-grid"><article><span class="care-icon" aria-hidden="true">01</span><h3>Начните с каталога</h3><p>Один раздел для всех украшений. Выберите серьги, колье, браслет или комплект и удобный порядок цен.</p></article><article><span class="care-icon" aria-hidden="true">02</span><h3>Присмотритесь</h3><p>Откройте понравившееся изделие: его настроение, материалы, размеры и состав комплекта собраны на одной странице.</p></article><article><span class="care-icon" aria-hidden="true">03</span><h3>Выбирайте спокойно</h3><p>Пока это знакомство с будущим сайтом: изделия и цены — примеры. Условия заказа появятся перед открытием.</p></article></div>
+    <section class="section container choosing" id="details" aria-labelledby="details-title">
+      <div class="choosing-heading"><p class="eyebrow">Как выбрать</p><h2 id="details-title">Присмотритесь<br><em>к деталям.</em></h2><p>Красиво — это важно.<br>Удобно носить — тоже.</p></div>
+      <div class="care-grid"><article><span class="care-icon" aria-hidden="true">01</span><div><h3>Найдите свою форму</h3><p>В каталоге можно оставить только серьги, колье, браслеты или комплекты. Выбирайте по силуэту и любимым оттенкам.</p></div></article><article><span class="care-icon" aria-hidden="true">02</span><div><h3>Посмотрите поближе</h3><p>Откройте карточку, чтобы рассмотреть фотографию и узнать, что входит в комплект. У колье «Медовая тропа» есть второй ракурс.</p></div></article><article><span class="care-icon" aria-hidden="true">03</span><div><h3>Не спешите с решением</h3><p>Перед покупкой важно знать длину, вес и материалы украшения. Мы дополняем эти сведения вместе с ценами и условиями заказа.</p></div></article></div>
     </section>
-    <section class="closing-banner container"><span aria-hidden="true">✳</span><p>Самое красивое украшение —<br><em>то, в котором вы собой.</em></p><span class="closing-note">Мастерская готовится к открытию.<br>Спасибо, что знакомитесь с нами.</span></section>
+    <section class="closing-banner container" aria-label="До встречи в мастерской"><p>Пусть найдётся<br><em>ваша любимая вещь.</em></p><div class="closing-note"><span class="eyebrow">До встречи в мастерской</span><p>Мы готовимся к открытию.<br>Спасибо, что заглянули.</p></div></section>
   </main>
-  <footer class="site-footer container"><div><a class="footer-brand" href="index.html">Мастерская Нелли</a><p>Маленькие сокровища для ваших историй.</p></div><p class="demo-note">Демонстрационный сайт. Название, фотографии, описания и цены — примеры. Заказы пока не принимаются.</p><small>© <span data-year>2026</span> Мастерская Нелли</small></footer>
+  <footer class="site-footer container"><div><a class="footer-brand" href="index.html">Мастерская Нелли</a><p>Украшения, которые становятся любимыми.</p></div><p class="demo-note">Фотографии украшений мастерской. Цены, размеры и материалы уточняются. Онлайн-заказы пока не принимаются.</p><small>© <span data-year>2026</span> Мастерская Нелли</small></footer>
 </body>
 </html>

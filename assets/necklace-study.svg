@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" fill="none">
+  <g stroke="#8a8d73" stroke-width="1.1" stroke-linecap="round">
+    <path d="M234 61C145 58 91 118 99 215c7 88 63 129 151 132 85-5 139-52 145-133 6-86-45-150-129-153" stroke-dasharray="2 5"/>
+    <path d="M233 71c-79-1-129 59-125 140 5 80 61 129 142 131 82-4 132-53 136-132 4-81-46-137-120-139" opacity=".4"/>
+    <ellipse cx="250" cy="63" rx="15" ry="8" transform="rotate(-10 250 63)"/>
+    <path d="m241 58 16 9m-21-7-7 1m34 1 9 1"/>
+  </g>
+  <g stroke="#6d745b" stroke-width="1.2" fill="#f3eee4">
+    <ellipse cx="217" cy="65" rx="8" ry="6" transform="rotate(-14 217 65)"/>
+    <ellipse cx="194" cy="73" rx="10" ry="7" transform="rotate(-25 194 73)"/>
+    <ellipse cx="169" cy="87" rx="11" ry="8" transform="rotate(-33 169 87)"/>
+    <ellipse cx="145" cy="106" rx="12" ry="9" transform="rotate(-46 145 106)"/>
+    <ellipse cx="126" cy="132" rx="13" ry="9" transform="rotate(-61 126 132)"/>
+    <ellipse cx="112" cy="163" rx="14" ry="10" transform="rotate(-77 112 163)"/>
+    <ellipse cx="107" cy="197" rx="14" ry="10" transform="rotate(86 107 197)"/>
+    <ellipse cx="111" cy="233" rx="15" ry="11" transform="rotate(77 111 233)"/>
+    <ellipse cx="124" cy="267" rx="15" ry="11" transform="rotate(57 124 267)"/>
+    <ellipse cx="147" cy="295" rx="15" ry="11" transform="rotate(40 147 295)"/>
+    <ellipse cx="177" cy="316" rx="16" ry="12" transform="rotate(27 177 316)"/>
+    <ellipse cx="213" cy="330" rx="16" ry="12" transform="rotate(12 213 330)"/>
+    <ellipse cx="250" cy="335" rx="16" ry="12"/>
+    <ellipse cx="287" cy="330" rx="16" ry="12" transform="rotate(-12 287 330)"/>
+    <ellipse cx="323" cy="316" rx="16" ry="12" transform="rotate(-27 323 316)"/>
+    <ellipse cx="353" cy="295" rx="15" ry="11" transform="rotate(-40 353 295)"/>
+    <ellipse cx="376" cy="267" rx="15" ry="11" transform="rotate(-57 376 267)"/>
+    <ellipse cx="389" cy="233" rx="15" ry="11" transform="rotate(-77 389 233)"/>
+    <ellipse cx="393" cy="197" rx="14" ry="10" transform="rotate(-86 393 197)"/>
+    <ellipse cx="388" cy="163" rx="14" ry="10" transform="rotate(77 388 163)"/>
+    <ellipse cx="374" cy="132" rx="13" ry="9" transform="rotate(61 374 132)"/>
+    <ellipse cx="355" cy="106" rx="12" ry="9" transform="rotate(46 355 106)"/>
+    <ellipse cx="331" cy="87" rx="11" ry="8" transform="rotate(33 331 87)"/>
+    <ellipse cx="306" cy="73" rx="10" ry="7" transform="rotate(25 306 73)"/>
+    <ellipse cx="283" cy="65" rx="8" ry="6" transform="rotate(14 283 65)"/>
+  </g>
+  <g stroke="#a1886b" stroke-width="1.3">
+    <path d="M250 348v10m-4 0h8l9 20-13 16-13-16z"/>
+    <path d="m246 362-5 15 8 11" stroke-width=".7"/>
+  </g>
+  <g stroke="#b2b09d" stroke-width=".8">
+    <path d="M51 91v228m-4-228h8m-8 228h8M168 195h165m-165-4v8m165-8v8"/>
+    <path d="M332 55h72m-60 7 56 48M322 358l75 24m-10-6 10 6-12 2"/>
+  </g>
+  <g fill="#777d64" font-family="Georgia, serif" font-style="italic" font-size="13">
+    <text x="204" y="185">форма и ритм</text>
+    <text x="350" y="48">застёжка</text>
+    <text x="343" y="407">эскиз / 01</text>
+  </g>
+</svg>
